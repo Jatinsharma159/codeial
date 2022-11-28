@@ -2,6 +2,8 @@ const express = require('express');// Becuase we don't this variable to be overr
 const app = express();
 const port = 8000;
 
+// Use Express router
+app.use('/',require('./routes'));
 
 app.listen(port,function(err){
     if(err){
