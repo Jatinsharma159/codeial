@@ -41,3 +41,5 @@ passport.deserializeUser(function(id,done){    // We are finding the user from t
         return done(null,user);
     });
 });
+
+module.exports = passport;
