@@ -18,6 +18,8 @@
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
     "git": "^0.1.5",
-    "mongoose": "^6.7.3"
+    "mongoose": "^6.7.3",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
   }
 }
