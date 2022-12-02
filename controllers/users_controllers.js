@@ -24,7 +24,7 @@ module.exports.signIn = function(req,res){
     if(req.isAuthenticated()){
         return res.redirect('/users/profile');
     }
-    
+
     return res.render('user_sign_in',{
         title: "Codeial | Sign In"
     });
@@ -59,4 +59,13 @@ module.exports.create = function(req,res){
 // sign in and create a session for the user
 module.exports.createSession = function(req,res){
     return res.redirect('/');
+}
+// For logging out the user
+module.exports.destroySession = function(req,res){
+    req.logout(function(err){
+        if(err){
+            console.log('Error while logging out')
+        }
+    });
+    return res.redirect('/')
 }

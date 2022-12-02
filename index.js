@@ -7,7 +7,7 @@ const db = require('./config/mongoose');
 const session = require('express-session');   // Used for session cookie
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
-const MongoStore = require('connect-mongo')  // Needs an argument. In this case we want to store session information
+const MongoStore = require('connect-mongo')  
 
 app.use(express.static('./assets'));
 app.use(expressLayouts);
