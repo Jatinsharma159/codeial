@@ -22,19 +22,22 @@ app.use(cookieParser());
 app.set('view engine','ejs');
 app.set('views','./views');
 
-app.use(session({
+// Middleware that takes session cookie and encrypts it
+app.use(session({             // session = require('express-session')
     name: 'codeial',
     // Change the secret before deployment in production mode
     secret: 'ehhsomething',
-    saveUninitialized: false,
-    resave: false,
+    saveUninitialized: false,   // Doubt
+    resave: false,              // Doubt
     cookie:{
         maxAge: (1000*60*100)
     }
 }))
 
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize());   // Doubt
+app.use(passport.session());      
+
+app.use(passport.setAuthenticatedUser);
 
 
 // Use Express router
