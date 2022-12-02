@@ -45,7 +45,7 @@ app.use(session({             // session = require('express-session')
     })
 }))
 
-app.use(passport.initialize());   // Doubt
+app.use(passport.initialize());   
 app.use(passport.session());      
 
 app.use(passport.setAuthenticatedUser);

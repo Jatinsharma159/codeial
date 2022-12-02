@@ -1,4 +1,5 @@
 const User = require('../model/users');
+const Post = require('../model/post');
 
 module.exports.home = function(req,res){
     // console.log(req.cookies);
@@ -7,11 +8,5 @@ module.exports.home = function(req,res){
         title: "Home"
     }) // Name of the file and the context we want to send
 }
-module.exports.post = function(req,res){
-    User.create(req.body,function(err){
-        if(err){
-            console.log('Error while creating post');
-        }
-    }
-    )
-}
+
+
